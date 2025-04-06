@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+        <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/js/all.min.js">
+
+
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid #e0e0e0;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #343a40;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1.25rem;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #495057;
+            background-color: #f8f9fa;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            border-color: #6c757d;
+            box-shadow: 0 0 0 2px rgba(108, 117, 125, 0.25);
+            outline: none;
+        }
+
+        .flex {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .flex-1 {
+            flex: 1;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-label input {
+            margin-right: 0.5rem;
+        }
+
+        .border-top {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 1.25rem;
+            margin-top: 1.25rem;
+        }
+
+        .payment-summary {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin-bottom: 0.75rem;
+        }
+
+        .total-amount {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #343a40;
+        }
+
+        button {
+            width: 100%;
+            padding:15px 1rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+        }
+
+
+
+    .success-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-content {
+        background: white;
+        padding: 40px;
+        border-radius: 5px;
+        text-align: center;
+
+
+    }
+
+    .modal-content p{
+padding: 10px 0;
+color: #515152;
+font-style: italic;
+
+    }
+
+    .modal-content button {
+padding: 12px 0;
+margin: 6px 0;
+    }
+
+
+
+    .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- <div> 
+    <span class="back-bttton back">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path><path fill="#000" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"></path></g></svg>
+    
+    </span>
+</div> -->
+<div class="container">
+    <h2 class="form-title">Delivery Information</h2>
+    <form id="deliveryForm">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name">
+            <span class="error-message" id="nameError">Please enter your name.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Delivery Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address">
+            <span class="error-message" id="addressError">Please enter your address.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city">
+            <span class="error-message" id="cityError">Please enter your city.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="postalCode">Postal Code</label>
+            <input type="text" id="postalCode" name="postalCode" placeholder="Enter your postal code">
+            <span class="error-message" id="postalCodeError">Please enter your postal code.</span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <h2>Payment Details</h2>
+        <form>
+            <div>
+                <label for="email">Email address</label>
+                <input type="email" id="email" value="@gmail.com">
+            </div>
+            <div>
+                <label for="card-number">Credit Card Number</label>
+                <input type="text" id="card-number" value="xxxx xxxx xxxx xxxx">
+            </div>
+            <div class="flex">
+                <div class="flex-1">
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="text" id="expiry-date" placeholder="mm / yy">
+                </div>
+                <div class="flex-1">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="xxx">
+                </div>
+            </div>
+            <div class="checkbox-label">
+                <input type="checkbox">
+                <span>I’ve a promo code</span>
+            </div>
+            <div class="border-top">
+                <div class="payment-summary total-amount">
+                    <span>Subtotal</span>
+                    <span> 
+                    <span>$</span>
+                    <span class="total2"></span>
+                </span>
+                </div>
+                <div class="payment-summary">
+                    <span>discount</span>
+                    <span>$0.00</span>
+                </div>
+                <div class="payment-summary total-amount">
+                    <span>Total Amount</span>
+                    <span> 
+                    <span>$</span>
+                    <span class="total2">0 </span>
+                </span>
+                </div>
+            </div>
+            <div>
+                <button type="submit"  onclick="hit(event)">Make payment</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="success-modal" id="successModal" style="display: none;">
+        <div class="modal-content">
+            <h3>Success!</h3>
+            <p>Your payment was successful.</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    
+   
+
+
+
+
+    <script src="./pay.js">
+     
+     document.getElementById('deliveryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Clear previous error messages
+            document.querySelectorAll('.error-message').forEach(function(error) {
+                error.style.display = 'none';
+            });
+
+            let isValid = true;
+
+            // Validate Name
+            if (document.getElementById('name').value.trim() === '') {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate Address
+            if (document.getElementById('address').value.trim() === '') {
+                document.getElementById('addressError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate City
+            if (document.getElementById('city').value.trim() === '') {
+                document.getElementById('cityError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate Postal Code
+            if (document.getElementById('postalCode').value.trim() === '') {
+                document.getElementById('postalCodeError').style.display = 'block';
+                isValid = false;
+            }
+
+            // If the form is valid, proceed (you can handle sending data to server here)
+            if (isValid) {
+                alert('Delivery information submitted successfully!');
+            }
+        });
+     
+    
+        
+            </script>
+</body>
+</html>
+
+
+   

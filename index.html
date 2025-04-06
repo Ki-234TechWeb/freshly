@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/js/all.min.js">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+        </style>
+
+</head>
+<style>
+    @media screen and (min-width: 768px){
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(10, 300px);
+gap: 20px;
+
+
+        }
+
+        .nav-brand{
+font-size: 2.6rem;
+color: #fff;
+
+
+    }
+
+
+
+
+        .recipe-con{
+    position: relative;
+    width: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+height: 420px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     padding: 10px ;
+    border: .5px solid  #4AA532;
+  
+    }
+
+
+ /* .recipe-img img{
+        width: 100%;
+        border-radius: 15px;
+        height: 400px;
+        object-fit: cover;
+        transition: 0.5s;
+        white-space: nowrap;
+        } */
+
+        .recipe-img{
+        height: 270px;
+        
+
+    }
+
+
+
+    .new-recipe-text p{
+        font-family: sans-serif;
+        font-size: 1.1rem;
+    color: #646363;
+    padding: 10px 0;
+
+        }
+        .new-recipe-text h1{
+            font-family: sans-serif;
+            font-size:2.3rem;
+       
+    
+            }
+
+            .new-recipe-text button{
+            font-family: sans-serif;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    border-radius: 30px;
+    margin: 10px 0;
+            }
+            .new-recipe-text ul{
+                font-family: sans-serif;
+                display: flex;
+    list-style-type: none;
+    transform: translateX(-10px);
+    width: 300px;
+padding: 10px 0;
+
+                }
+
+
+                .overflow-img{
+    display: grid;
+    grid-template-columns: repeat(4,115px);
+    gap: 10px;
+    transform: translateX(0px);
+    }
+    
+   
+    
+    .new-recipe-img{
+    transform: rotate(-38deg);
+    height:300px;
+   position: absolute;
+   right: -90px; 
+
+
+    }
+
+.sidenav{
+    width: 50;
+    height: 100%;
+}
+
+.dark{
+height:100%;
+
+}
+.planned{
+    width: 90%;
+display: flex;
+flex-direction: row ;
+align-items: flex-start;
+justify-items: space-between;
+margin: 20px auto;
+
+
+gap: 50px;
+
+
+}
+.planned div {
+flex: 1 0 calc(50% - 20px);
+
+
+
+}
+
+
+.planned-img {
+    width: 90%;
+height: 400px;
+overflow: hidden;
+
+margin: 20px 0;
+object-fit: cover;
+
+}
+
+.myplanned{
+    width: 90%;
+margin-top: 50px;
+
+}
+.myplanned span {
+padding: 30px 0;
+font-weight: bold;
+font-family:var(--font-family);
+text-transform: capitalize;
+}
+.myplanned p {
+    font-family:var(--font-family);
+    font-size: 1.3em;
+    color: #555754;
+    margin-bottom: 10px;
+}
+.myplanned h1{
+font-size: 3rem;
+    
+}
+
+
+
+
+.planned-img img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+    }
+    
+
+    .tweet {
+    width: 80%;
+    display: flex;
+    gap: 15px;
+    border: 1px solid #ddd;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+  }
+  
+  .tweet-text {
+    font-size:1.2rem;
+    color: #575656;
+line-height: 1.5;
+
+
+  }
+
+  .profile-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+.testi h1 {
+font-size: 2.5rem;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+@media screen and (min-width: 992px){
+
+    .nav-cart svg{
+                width: 30px;
+                
+                }
+
+
+
+        .nav-brand{
+font-size: 3rem;
+color: #fff;
+
+
+    }
+
+.nav-bar{
+display: none;
+
+
+}
+
+.menu-list{
+    width:90%;
+    overflow-x: hidden;
+    /* border-right: .5px solid #b4b4b4;
+    background: linear-gradient(0deg,  rgba(24, 16, 16, 0.7),rgba(150, 150, 150, 0.8) ); */
+    padding: 0 ;
+    }
+ 
+    .menu-border{
+        border-right: .5px solid #b4b4b4;
+        /* background: linear-gradient(50deg,  rgba(37, 37, 37, 0.4),rgba(138, 137, 137, 0.6) ); */
+    height: 45px;
+    /* padding-left: 30px; */
+    position: absolute;
+    right: 10%;
+    top: 24%;
+    box-shadow: 0 0 10px #f30202;
+    
+    
+    }
+
+
+
+
+
+
+
+.new-recipe-text p{
+        font-family: sans-serif;
+        font-size: 1.3rem;
+    color: #3b3b3b;
+    padding: 10px 0;
+
+        }
+        .new-recipe-text h1{
+            font-family: sans-serif;
+            font-size: 2.5rem;
+       
+    
+            }
+
+            .new-recipe-text button{
+            font-family: sans-serif;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-radius: 30px;
+    margin: 10px 0;
+            }
+            .new-recipe-text ul{
+                font-family: sans-serif;
+                display: flex;
+    list-style-type: none;
+    transform: translateX(-10px);
+    width: 350px;
+padding: 10px 0;
+
+                }
+
+
+                .overflow-img{
+    display: grid;
+    grid-template-columns: repeat(4,120px);
+    gap: 10px;
+    transform: translateX(0px);
+    }
+    
+   
+    
+    .new-recipe-img{
+    transform: rotate(-38deg);
+    height:150px;
+   position: absolute;
+   right: 80px; 
+
+
+    }
+
+    .overflow-single-img img{
+height: 150px;
+
+
+
+    }
+
+    .main-menu{
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    background-color: #4AA532;
+    padding: 20px 0;
+    }
+
+    .search_bar{
+display: none;
+
+
+    } 
+    .search1{
+display: block;
+width: 400px;
+
+    }
+    .main2{
+width:75% ;
+
+
+}
+
+.main2 button {
+font-size: 0.8rem;
+
+
+}
+.menu-list{
+    border-left: 1px solid #ddd;
+    }
+
+
+
+
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1304px){
+
+
+        .nav-brand{
+
+color: #fff;
+
+
+    }
+
+
+ 
+
+
+
+
+    .bar1,.bar2{
+        background-color: #fff;
+        width: 40px;
+        height: 3px;
+        margin: 10px 0;
+        transition: 0.4s;
+        list-style-type:none;
+        cursor: pointer;
+        }
+        
+     
+            
+            .nav-cart svg{
+                width: 40px;
+                
+                }
+
+
+
+
+
+
+
+        .new-recipe-text p{
+        font-family: sans-serif;
+        font-size: 1.5rem;
+    color: #3b3b3b;
+    padding: 10px 0;
+
+        }
+        .new-recipe-text h1{
+            font-family: sans-serif;
+            font-size: 2.6rem;
+       
+    
+            }
+
+            .new-recipe-text button{
+            font-family: sans-serif;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-radius: 30px;
+    margin: 10px 0;
+    padding:10px 30px ;
+            }
+            .new-recipe-text ul{
+                font-family: sans-serif;
+                display: flex;
+    list-style-type: none;
+    transform: translateX(-10px);
+    width: 500px;
+padding: 10px 0;
+
+                }
+
+                .new-recipe{
+    background-color: #f4f5f4;
+    max-width: 100%;
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+   padding: 50px 0;
+    }
+
+
+
+
+
+                /* .overflow-img{
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+    gap: 20px;
+    transform: translateX(50px);
+    }
+     */
+    
+    /* .overflow-img img{
+    
+    height:180px;
+
+    
+    } */
+
+    .new-recipe-img{
+    transform: rotate(-38deg);
+    height:300px;
+   right: 20px;
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav-bar">
+                <ul onclick="openNav()">
+                    <li class="bar1" id="barone"></li>
+                    <li class="bar2" id="bartwo"></li>
+                </ul>
+
+            </div>
+            <div class="nav-brand"> freshly</div>
+            <div class="main-menu main2">
+                <div class="menu-list">
+                  <div class="menu-list-item mainMenu" id="chefs">
+                    <button>New recipes</button>
+                    <button>make ahead breakfast</button>
+                    <button>packed lunches</button>
+                    <button class="menu-btn">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                          class="group-[.active]:stroke-zinc-950 group-[.inactive]:!stroke-zinc-50 h-3.5 w-3.5"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+                          ></path>
+                        </svg>
+                        your saved recipes
+                      </button>
+                    <button>easy luches</button>
+                    <button>weeknight dinner</button>
+                    <button>familiy meal</button>
+                   
+                    <button class="menu-btn">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                        class="group-[.active]:stroke-zinc-950 group-[.inactive]:!stroke-zinc-50 h-3.5 w-3.5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+                        ></path>
+                      </svg>
+                      on your planner
+                    </button>
+                  </div>
+                </div>
+                <div class="menu-border"></div>
+              
+              </div>
+          
+
+
+
+
+            <div class="nav-cart cart-icon" onclick="openCart()">
+
+                <svg viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M343.376 717.726a7.984 7.984 0 0 1-7.966-7.388 7.99 7.99 0 0 1 7.374-8.576L945 656.472l61.52-384.42H224.056c-4.422 0-8-3.576-8-7.998a7.994 7.994 0 0 1 8-7.998h791.836a8.01 8.01 0 0 1 7.904 9.264l-63.986 399.918a8.022 8.022 0 0 1-7.312 6.716l-608.514 45.756c-0.202 0.016-0.406 0.016-0.608 0.016zM312.03 719.96a7.988 7.988 0 0 1-7.716-5.922L128.35 58.168a7.99 7.99 0 0 1 5.654-9.794c4.266-1.124 8.654 1.376 9.794 5.654l175.962 655.874a7.994 7.994 0 0 1-5.654 9.794 7.988 7.988 0 0 1-2.076 0.264z" fill=""></path><path d="M343.382 717.758a7.992 7.992 0 0 1-7.716-5.92L151.078 26.182a8 8 0 0 1 15.45-4.154l184.586 685.654a8.012 8.012 0 0 1-5.646 9.81 7.97 7.97 0 0 1-2.086 0.266zM136.074 64.096H24.098a7.992 7.992 0 0 1-7.998-7.998 7.994 7.994 0 0 1 7.998-7.998h111.976a7.994 7.994 0 0 1 7.998 7.998 7.994 7.994 0 0 1-7.998 7.998z" fill=""></path><path d="M158.804 32.104H24.098a7.994 7.994 0 0 1-7.998-7.998c0-4.422 3.576-8 7.998-8h134.708a7.994 7.994 0 0 1 7.998 8 7.998 7.998 0 0 1-8 7.998z" fill=""></path><path d="M24.098 64.096C10.866 64.096 0.102 53.332 0.102 40.102c0-13.232 10.764-23.996 23.996-23.996a7.994 7.994 0 0 1 7.998 8 7.994 7.994 0 0 1-7.998 7.998 8.002 8.002 0 0 0-7.998 7.998 8.004 8.004 0 0 0 7.998 7.998 7.994 7.994 0 0 1 7.998 7.998 7.994 7.994 0 0 1-7.998 7.998zM951.904 368.034H301.508a7.994 7.994 0 0 1-7.998-7.998 7.994 7.994 0 0 1 7.998-7.998h650.396c4.422 0 8 3.576 8 7.998a7.994 7.994 0 0 1-8 7.998zM919.912 480.01H349.498c-4.42 0-7.998-3.576-7.998-7.998s3.578-7.998 7.998-7.998h570.414c4.422 0 7.998 3.576 7.998 7.998s-3.576 7.998-7.998 7.998zM887.918 591.988H381.492a7.994 7.994 0 0 1-7.998-8 7.994 7.994 0 0 1 7.998-7.998h506.426a7.994 7.994 0 0 1 7.998 7.998c0 4.422-3.576 8-7.998 8zM296.034 815.942a7.9 7.9 0 0 1-3.468-0.796 7.982 7.982 0 0 1-3.724-10.67l47.35-98.184c1.912-3.966 6.694-5.624 10.678-3.732a8.004 8.004 0 0 1 3.724 10.684l-47.35 98.184a7.986 7.986 0 0 1-7.21 4.514zM264.36 815.942a7.89 7.89 0 0 1-3.466-0.796 7.98 7.98 0 0 1-3.726-10.67l47.35-98.184c1.914-3.966 6.694-5.624 10.678-3.732a8.006 8.006 0 0 1 3.726 10.684l-47.35 98.184a7.988 7.988 0 0 1-7.212 4.514zM919.912 879.928h-575.88a7.994 7.994 0 0 1-7.998-7.998c0-4.422 3.576-8 7.998-8h575.88a7.994 7.994 0 0 1 7.998 8 7.994 7.994 0 0 1-7.998 7.998zM919.912 847.934h-575.88a7.992 7.992 0 0 1-7.998-7.998 7.994 7.994 0 0 1 7.998-7.998h575.88a7.994 7.994 0 0 1 7.998 7.998 7.992 7.992 0 0 1-7.998 7.998z" fill=""></path><path d="M344.032 879.928c-48.514 0-87.982-32.292-87.982-71.986a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998c0 30.87 32.292 55.988 71.986 55.988a7.994 7.994 0 0 1 7.998 8 7.994 7.994 0 0 1-7.998 7.998z" fill=""></path><path d="M344.032 847.934c-26.432 0-55.988-17.106-55.988-39.992a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998c0 11.67 20.558 23.996 39.992 23.996a7.994 7.994 0 0 1 7.998 7.998 7.994 7.994 0 0 1-7.998 7.998zM919.912 879.928a7.994 7.994 0 0 1-7.998-7.998c0-4.422 3.576-8 7.998-8a8 8 0 0 0 7.998-7.996c0-4.406-3.592-8-7.998-8a7.992 7.992 0 0 1-7.998-7.998 7.994 7.994 0 0 1 7.998-7.998c13.23 0 23.994 10.764 23.994 23.996 0 13.23-10.764 23.994-23.994 23.994zM855.926 623.98a7.994 7.994 0 0 1-7.998-7.998v-287.94a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998v287.942a7.994 7.994 0 0 1-7.998 7.996zM743.948 623.98a7.992 7.992 0 0 1-7.996-7.998v-287.94a7.992 7.992 0 0 1 7.996-7.998c4.422 0 8 3.578 8 7.998v287.942a7.994 7.994 0 0 1-8 7.996zM631.97 623.98a7.994 7.994 0 0 1-7.998-7.998v-287.94a7.994 7.994 0 0 1 7.998-7.998c4.422 0 8 3.578 8 7.998v287.942a7.994 7.994 0 0 1-8 7.996zM519.994 623.98a7.994 7.994 0 0 1-7.998-7.998v-287.94a7.994 7.994 0 0 1 7.998-7.998c4.422 0 8 3.578 8 7.998v287.942a7.994 7.994 0 0 1-8 7.996zM408.018 623.98a7.994 7.994 0 0 1-7.998-7.998v-287.94a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998v287.942a7.992 7.992 0 0 1-7.998 7.996zM400.02 1007.9c-35.282 0-63.986-28.698-63.986-63.986 0-6.216 0.89-12.374 2.654-18.278a8 8 0 0 1 9.944-5.376 7.978 7.978 0 0 1 5.382 9.938 48.29 48.29 0 0 0-1.984 13.714c0 26.462 21.528 47.99 47.99 47.99s47.99-21.528 47.99-47.99c0-4.672-0.672-9.28-1.984-13.714a7.978 7.978 0 0 1 5.38-9.938 7.972 7.972 0 0 1 9.944 5.376 63.764 63.764 0 0 1 2.656 18.278c0 35.29-28.706 63.986-63.986 63.986z" fill=""></path><path d="M400.02 967.91c-17.988 0-35.804-42.118-47.576-77.454a7.988 7.988 0 0 1 5.052-10.108 7.968 7.968 0 0 1 10.116 5.044c11.022 33.056 26.442 64.176 32.986 66.596 5.388-2.42 20.808-33.54 31.828-66.596a7.968 7.968 0 0 1 10.116-5.044 7.984 7.984 0 0 1 5.054 10.108c-11.772 35.336-29.588 77.454-47.576 77.454zM815.934 1007.9c-35.274 0-63.986-28.698-63.986-63.986 0-6.232 0.906-12.388 2.656-18.292a8.026 8.026 0 0 1 9.964-5.36 8.024 8.024 0 0 1 5.376 9.954c-1.328 4.42-2 9.028-2 13.7 0 26.462 21.528 47.99 47.99 47.99s47.99-21.528 47.99-47.99c0-4.672-0.656-9.28-1.984-13.714a8.032 8.032 0 0 1 5.39-9.954 8.006 8.006 0 0 1 9.95 5.406 64.284 64.284 0 0 1 2.64 18.262c0 35.288-28.712 63.984-63.986 63.984z" fill=""></path><path d="M815.934 967.91c-17.996 0-35.804-42.118-47.584-77.454a8 8 0 0 1 5.062-10.108 7.988 7.988 0 0 1 10.122 5.044c11.014 33.056 26.434 64.176 32.978 66.596 5.388-2.42 20.806-33.54 31.822-66.596a7.982 7.982 0 0 1 10.122-5.044 7.994 7.994 0 0 1 5.062 10.108c-11.78 35.336-29.588 77.454-47.584 77.454z" fill=""></path></g>
+                </svg>
+    <div class="cart-num-item"></div>
+<div class="empty">your cart is empty</div>
+            </div>
+
+        </nav>
+
+        
+<div class="dark"></div>
+        <div id="mySidenav" class="sidenav">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <div class="nav1">  
+            <a href="#offer">new recipes 
+                <span> 
+                <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(180)">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path><path fill="#000000" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"></path></g>
+            </svg>
+        </span>
+    </a>
+            <a href="#">make aheed breakfasts  
+                <span> 
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(180)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path><path fill="#000000" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"></path></g>
+                </svg>
+            </span>
+            </a>
+            <a href="#">packed lunches 
+                <span> 
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(180)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path><path fill="#000000" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"></path></g>
+                </svg>
+            </span>
+            </a>
+            <a href="#" class="menu-btn">
+               <span> <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                  class="group-[.active]:stroke-zinc-950 group-[.inactive]:!stroke-zinc-50 h-3.5 w-3.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+                  ></path>
+                </svg>
+                your saved recipes
+                </span>
+                <span> 
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(180)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path><path fill="#000000" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"></path></g>
+                </svg>
+            </span>
+            </a>
+
+            <a href="#">Easy lunches 
+                <span> 
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(180)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path><path fill="#000000" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"></path></g>
+                </svg>
+            </span>
+            </a>
+            <a href="#">Weeknight dinner  
+                <span> 
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(180)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path><path fill="#000000" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"></path></g>
+                </svg>
+            </span>
+            </a>
+            <a href="#">family meal  
+                <span> 
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(180)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path><path fill="#000000" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"></path></g>
+                </svg>
+            </span>
+            </a>
+            
+
+
+
+            
+
+</div>
+
+<div class="nav2">
+<div class="foot1">
+    <a href="#">about us </a>
+    <a href="#"> Contact Us </a>
+    <a href="#">  Privacy & Cookies </a>
+    <a href="#">Careers </a>
+   
+
+
+
+</div>
+
+<div class="foot2">
+
+    <a href="#">Terms & Conditions </a>
+    <a href="#">  Accessibility </a>
+    <a href="#">  Advertise with us </a>
+    <a href="#">  Ad Choices </a>
+   
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+        <div class="search_bar">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="search for a car">
+            <span class="filter" onclick="filt()">
+
+
+
+                <span class="filt-icon">
+                    <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title>Filter</title>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Filter">
+                                    <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect>
+                                    <line x1="4" y1="5" x2="16" y2="5" id="Path" stroke="#fff" stroke-width="2"
+                                        stroke-linecap="round"> </line>
+                                    <line x1="4" y1="12" x2="10" y2="12" id="Path" stroke="#fff" stroke-width="2"
+                                        stroke-linecap="round"> </line>
+                                    <line x1="14" y1="12" x2="20" y2="12" id="Path" stroke="#fff" stroke-width="2"
+                                        stroke-linecap="round"> </line>
+                                    <line x1="8" y1="19" x2="20" y2="19" id="Path" stroke="#fff" stroke-width="2"
+                                        stroke-linecap="round"> </line>
+                                    <circle id="Oval" stroke="#fff" stroke-width="2" stroke-linecap="round" cx="18"
+                                        cy="5" r="2"> </circle>
+                                    <circle id="Oval" stroke="#fff" stroke-width="2" stroke-linecap="round" cx="12"
+                                        cy="12" r="2"> </circle>
+                                    <circle id="Oval" stroke="#fff" stroke-width="2" stroke-linecap="round" cx="6"
+                                        cy="19" r="2"> </circle>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+
+
+            </span>
+        </div>
+
+    </header>
+
+  
+      
+    <div class="new-recipe">
+        <div class="recipe">
+          <div class="new-recipe-text">
+            <h1>Can’t decide what to eat?</h1>
+            <p>
+              Discover exclusive new recipes designed to suit your mood, with
+              Deliveroo.
+            </p>
+  
+            <button type="button">get started</button>
+            <ul>
+              <li>
+                <img src="/img/deliveroo-bag.webp" alt="" />
+              </li>
+              <li>
+                <p>
+                  We're making ours with groceries from
+                  <span class="relative"
+                    ><svg
+                      viewBox="0 0 68 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="block h-full w-full"
+                    >
+                      <path
+                        d="M47.1388 7.63814C45.4856 7.63814 44.275 8.83513 44.275 10.6238C44.275 12.4125 45.4765 13.6095 47.3375 13.6095C48.1506 13.6095 48.9546 13.3882 49.6276 12.9546L49.0675 11.6898C48.539 11.9654 47.9563 12.1325 47.3601 12.1325C46.5877 12.1325 46.0502 11.8344 45.8198 11.2788H49.9393C49.9844 11.0665 50.007 10.8587 50.007 10.6013C50.007 8.8261 48.7829 7.63814 47.1433 7.63814H47.1388ZM45.7295 10.1044C45.8966 9.44944 46.389 9.0926 47.1388 9.0926C47.8886 9.0926 48.3945 9.44944 48.5481 10.1044H45.7295ZM64.2625 7.63814C62.6003 7.63814 61.3671 8.84868 61.3671 10.6238C61.3671 12.399 62.6003 13.6095 64.2625 13.6095C65.9247 13.6095 67.1578 12.399 67.1578 10.6238C67.1578 8.84868 65.9247 7.63814 64.2625 7.63814ZM64.2625 12.0693C63.4133 12.0693 62.7854 11.5046 62.7854 10.6238C62.7854 9.74304 63.4133 9.18294 64.2625 9.18294C65.1117 9.18294 65.7395 9.73852 65.7395 10.6238C65.7395 11.5092 65.1207 12.0693 64.2625 12.0693ZM42.2785 7.76462H43.8775L42.3463 13.4921H39.9885L38.4572 7.76462H40.0336L41.1583 12.4035L42.2831 7.76462H42.2785ZM36.2123 7.76462H37.6758V13.4921H36.2123V7.76462ZM57.7762 7.64266C56.1139 7.64266 54.8808 8.8532 54.8808 10.6284C54.8808 12.4035 56.1139 13.6141 57.7762 13.6141C59.4384 13.6141 60.6715 12.4035 60.6715 10.6284C60.6715 8.8532 59.4384 7.64266 57.7762 7.64266ZM57.7762 12.0738C56.927 12.0738 56.2991 11.5092 56.2991 10.6284C56.2991 9.74755 56.927 9.18745 57.7762 9.18745C58.6253 9.18745 59.2532 9.74304 59.2532 10.6284C59.2532 11.5137 58.6344 12.0738 57.7762 12.0738ZM55.0028 7.92271L54.3072 9.48557C54.0542 9.30941 53.7787 9.22811 53.4805 9.22811C52.9972 9.22811 52.6223 9.46299 52.4236 9.83789V13.4876H50.9601V8.8803L50.7162 7.7601H52.2248L52.3784 8.48281C52.7307 7.92723 53.2818 7.62911 53.9413 7.62911C54.3026 7.62911 54.6775 7.71945 54.9982 7.91819L55.0028 7.92271ZM29.6447 7.62911C27.9915 7.62911 26.7809 8.8261 26.7809 10.6148C26.7809 12.4035 27.9824 13.6005 29.8434 13.6005C30.6565 13.6005 31.4605 13.3792 32.1335 12.9455L31.5734 11.6808C31.0449 11.9563 30.4622 12.1235 29.866 12.1235C29.0936 12.1235 28.5561 11.8253 28.3257 11.2698H32.4452C32.4903 11.0575 32.5129 10.8497 32.5129 10.5922C32.5129 8.81706 31.2888 7.62911 29.6492 7.62911H29.6447ZM28.2083 10.1089C28.3754 9.45395 28.8678 9.09711 29.6176 9.09711C30.3674 9.09711 30.8733 9.45395 31.0268 10.1089H28.2083ZM37.8655 6.04818C37.8655 6.58118 37.468 6.97867 36.9531 6.97867C36.4381 6.97867 36.0271 6.58118 36.0271 6.04818C36.0271 5.51518 36.4246 5.11769 36.9531 5.11769C37.4816 5.11769 37.8655 5.51518 37.8655 6.04818ZM25.8053 5.2261H24.3418V8.45571C23.8991 7.94529 23.2939 7.64718 22.5802 7.64718C21.1167 7.64718 19.9829 8.85772 19.9829 10.6329C19.9829 12.408 21.1167 13.6186 22.5802 13.6186C23.3074 13.6186 23.9353 13.3069 24.3734 12.7739L24.527 13.4966H26.0582L25.8053 12.3087V5.2261ZM22.8738 12.0738C22.0246 12.0738 21.3967 11.5092 21.3967 10.6284C21.3967 9.74755 22.0246 9.18745 22.8738 9.18745C23.723 9.18745 24.3508 9.74304 24.3508 10.6284C24.3508 11.5137 23.732 12.0738 22.8738 12.0738ZM33.4344 5.2261H34.8979V13.4966H33.4344V5.21706V5.2261ZM10.9445 7.94981L9.51267 1.26023L5.02735 2.20878L6.45922 8.89837L0 10.2535L1.14279 15.597L12.5119 18L15.1137 12.1912L16.3513 0.478795L11.7892 0L10.9491 7.93626L10.9445 7.94981ZM8.18921 11.5272C7.95433 11.7395 7.64266 11.7215 7.31744 11.613C6.9877 11.5046 6.84316 11.1117 6.96512 10.6329C7.05546 10.276 7.4936 10.2263 7.71041 10.2218C7.79172 10.2218 7.87302 10.2354 7.94981 10.2715C8.10339 10.3393 8.36537 10.4883 8.41957 10.7142C8.49636 11.0394 8.41957 11.3149 8.18921 11.5272ZM11.4821 11.8976C11.3104 12.1912 10.8632 12.2319 10.4251 12.0151C10.127 11.8705 10.1315 11.5046 10.1631 11.2788C10.1812 11.1568 10.2309 11.0394 10.3077 10.9445C10.4115 10.809 10.5922 10.6374 10.7955 10.6329C11.1297 10.6238 11.4143 10.7729 11.5769 11.0394C11.7395 11.3059 11.6582 11.604 11.4866 11.8976H11.4821Z"
+                        fill="#00CCBD"
+                      ></path>
+                      </svg></span>
+                </p>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="new-recipe-img">
+            <div class="overflow-img">
+              <div class="overflow-single-img hidden">
+                <img src="/img/recip-design.jpg" alt="" />
+              </div>
+  
+              <div class="overflow-single-img">
+                <img src="/img/recip-design2.jpeg" alt="" />
+              </div>
+  
+              <div class="overflow-single-img">
+                <img src="/img/recip-design3.jpg" alt="" />
+              </div>
+  
+              <div class="overflow-single-img">
+                <img src="/img/recip-design4.jpg" alt="" />
+              </div>
+  
+              <div class="overflow-single-img">
+                <img src="/img/recip-design-6.jpg" alt="" />
+              </div>
+  
+              <div class="overflow-single-img">
+                <img src="/img/recip-design-5.jpg" alt="" />
+              </div>
+  
+              <div class="overflow-single-img">
+                <img src="/img/recip-design2.jpeg" alt="" />
+              </div>
+              <div class="overflow-single-img">
+                <img src="/img/recip-design.jpg" alt="" />
+              </div>
+  
+              <div class="overflow-single-img hidden">
+                <img src="/img/recip-design2.jpg" alt="" />
+              </div>
+              <div class="overflow-single-img">
+                <img src="/img/recip-design4.jpg" alt="" />
+              </div>
+  
+              <div class="overflow-single-img">
+                <img src="/img/recip-design-5.jpg" alt="" />
+              </div>
+  
+              <div class="overflow-single-img">
+                <img src="/img/recip-design-6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- max screen menu -->
+<!-- <div class="main-menu">
+    <div class="menu-list">
+      <div class="menu-list-item mainMenu" id="chefs">
+        <button>New recipes</button>
+        <button>make ahead breakfast</button>
+        <button>packed lunches</button>
+        <button class="menu-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              class="group-[.active]:stroke-zinc-950 group-[.inactive]:!stroke-zinc-50 h-3.5 w-3.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+              ></path>
+            </svg>
+            your saved recipes
+          </button>
+        <button>easy luches</button>
+        <button>weeknight dinner</button>
+        <button>familiy meal</button>
+       
+        <button class="menu-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            class="group-[.active]:stroke-zinc-950 group-[.inactive]:!stroke-zinc-50 h-3.5 w-3.5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+            ></path>
+          </svg>
+          on your planner
+        </button>
+      </div>
+    </div>
+    <div class="menu-border"></div>
+    <div class="menu-filter-icon">
+      <button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          class="h-5 w-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div> -->
+
+
+
+
+
+    
+
+    <div class="category">
+        <div class="name" id="offer">
+            <h2>special offers</h2>
+            <span><a href="./offer.html">view all </a></span>
+        </div>
+        <div class="recipes" id="chefs">
+            <div class="recipe-con" id="id1">
+                <div class="recipe-img" onclick="viewProuct(event, 'id1')" >
+                    <img src="./img/wha.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">6</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tag">
+                    <span class="rate">8</span>% off
+                </div>
+
+            </div>
+
+
+            <div class="recipe-con" id="id2">
+                <div class="recipe-img" onclick="viewProuct(event,'id2' )">
+                    <img src="./img/what-to1.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">15</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tag">
+                    <span class="rate">10</span>% off
+                </div>
+
+            </div>
+
+            <div class="recipe-con" id="id3">
+                <div class="recipe-img" onclick="viewProuct(event,'id3' )">
+                    <img src="./img/what-to2.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">8</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tag">
+                    <span class="rate">12</span>% off
+                </div>
+
+            </div>
+
+            <div class="recipe-con" id="id4">
+                <div class="recipe-img" onclick="viewProuct(event,'id4' )">
+                    <img src="./img/what-to3.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">6</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tag">
+                    <span class="rate">10</span>% off
+                </div>
+
+            </div>
+
+            <div class="recipe-con" id="5">
+                <div class="recipe-img" onclick="viewProuct(event,'id4')">
+                    <img src="./img/what-to4.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">10</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tag">
+                    <span class="rate">5</span>% off
+                </div>
+
+            </div>
+
+            <div class="recipe-con" id="6">
+                <div class="recipe-img" onclick="viewProuct(event,'id6' )">
+                    <img src="./img/what-to5.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">8</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="tag">
+                    <span class="rate">15</span>% off
+                </div>
+            </div>
+
+            <div class="recipe-con" id="7">
+                <div class="recipe-img" onclick="viewProuct(event,'id7' )">
+                    <img src="./img/what-to6.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">15</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tag">
+                    <span class="rate">10</span>% off
+                </div>
+
+            </div>
+
+
+            <div class="recipe-con" id="8">
+                <div class="recipe-img" onclick="viewProuct(event,'id8' )">
+                    <img src="./img/what-to7.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">10</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tag">
+                    <span class="rate">10</span>% off
+                </div>
+
+            </div>
+
+            <div class="recipe-con" id="9">
+                <div class="recipe-img" onclick="viewProuct(event,'id9' )">
+                    <img src="./img/what-to8.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">15</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tag">
+                    <span class="rate">4</span>% off
+                </div>
+
+            </div>
+
+            <div class="recipe-con" id="10">
+                <div class="recipe-img"  onclick="viewProuct(event,'id10' )">
+                    <img src="./img/what-to9.avif" alt="" />
+                </div>
+                <div class="recipe-text">
+                    <p>recipe</p>
+                    <h3>skicky mango paneer kebabs</h3>
+                </div>
+
+
+
+                <div class="item">
+                    <div> <span>$</span>
+                        <div class="price">11</div>
+                    </div>
+
+                    <div class="shop-icon">
+                        <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tag">
+                    <span class="rate">8</span>% off
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+</div>
+
+
+<div class="category">
+    <div class="name">
+        <h2>make Ahead breakfast</h2>
+        <span><a href="./offer.html">view all </a></span>
+    </div>
+    <div class="recipes" id="chefs">
+        <div class="recipe-con" id="id1">
+            <div class="recipe-img" onclick="viewProuct(event, 'id1')" >
+                <img src="./img/collect1.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>curry  butter chicken</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">15</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">2</span>% off
+            </div>
+
+        </div>
+
+
+        <div class="recipe-con" id="id2">
+            <div class="recipe-img" onclick="viewProuct(event,'id2' )">
+                <img src="./img/collect2.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>skicky mango paneer kebabs</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">10</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">10</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="id3">
+            <div class="recipe-img" onclick="viewProuct(event,'id3' )">
+                <img src="./img/collect.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>skicky mango paneer kebabs</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">8</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">12</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="id4">
+            <div class="recipe-img" onclick="viewProuct(event,'id4' )">
+                <img src="./img/collect3.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>skicky mango paneer kebabs</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">6</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">10</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="5">
+            <div class="recipe-img" onclick="viewProuct(event,'id4')">
+                <img src="./img/collect4.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>skicky mango paneer kebabs</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">8</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">5</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="6">
+            <div class="recipe-img" onclick="viewProuct(event,'id6' )">
+                <img src="./img/collect5.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>skicky mango paneer kebabs</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">8</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="tag">
+                <span class="rate">15</span>% off
+            </div>
+        </div>
+
+        <div class="recipe-con" id="7">
+            <div class="recipe-img" onclick="viewProuct(event,'id7' )">
+                <img src="./img/collect6.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>skicky mango paneer kebabs</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">15</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">10</span>% off
+            </div>
+
+        </div>
+
+
+        <div class="recipe-con" id="8">
+            <div class="recipe-img" onclick="viewProuct(event,'id8' )">
+                <img src="./img/what-to7.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>skicky mango paneer kebabs</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">10</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">10</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="9">
+            <div class="recipe-img" onclick="viewProuct(event,'id9' )">
+                <img src="./img/what-to8.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>skicky mango paneer kebabs</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">15</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">4</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="10">
+            <div class="recipe-img"  onclick="viewProuct(event,'id10' )">
+                <img src="./img/what-to9.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>skicky mango paneer kebabs</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">11</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">8</span>% off
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+<div class="planned">
+    <div class="planned-img">
+        <img src="./img/mealpprepbg.webp" alt="">
+    </div>
+<div class="myplanned">
+<span>plan your week </span>
+
+<h1>build your own</h1>
+<p>Choose from a variety of proteins, carbs, veg and toppings to build out what you want to cook and eat in the days to come.</p>
+
+<div class="planned-btn">
+    
+<a href="#plan">start planning</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+<div class="category">
+    <div class="name">
+        <h2>packed lunch</h2>
+        <span><a href="./offer.html">view all </a></span>
+    </div>
+    <div class="recipes" id="chefs">
+        <div class="recipe-con" id="id1">
+            <div class="recipe-img" onclick="viewProuct(event, 'id1')" >
+                <img src="./img/packed1.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>lunch box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">15</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">2</span>% off
+            </div>
+
+        </div>
+
+
+        <div class="recipe-con" id="id2">
+            <div class="recipe-img" onclick="viewProuct(event,'id2' )">
+                <img src="./img/packed2.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>lunch box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">10</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">10</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="id3">
+            <div class="recipe-img" onclick="viewProuct(event,'id3' )">
+                <img src="./img/packed3.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>lunch box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">8</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">12</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="id4">
+            <div class="recipe-img" onclick="viewProuct(event,'id4' )">
+                <img src="./img/packed4.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>lunch box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">6</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">10</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="5">
+            <div class="recipe-img" onclick="viewProuct(event,'id4')">
+                <img src="./img/packed5.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe </p>  
+                    <h3> lunch box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">8</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">5</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="6">
+            <div class="recipe-img" onclick="viewProuct(event,'id6' )">
+                <img src="./img/packed6.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                    <h3> box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">8</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="tag">
+                <span class="rate">15</span>% off
+            </div>
+        </div>
+
+        <div class="recipe-con" id="7">
+            <div class="recipe-img" onclick="viewProuct(event,'id7' )">
+                <img src="./img/packed10.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>lunch box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">15</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">10</span>% off
+            </div>
+
+        </div>
+
+
+        <div class="recipe-con" id="8">
+            <div class="recipe-img" onclick="viewProuct(event,'id8' )">
+                <img src="./img/packed7.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>lunch box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">10</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">10</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="9">
+            <div class="recipe-img" onclick="viewProuct(event,'id9' )">
+                <img src="./img/packed8.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>lunch box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">15</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">4</span>% off
+            </div>
+
+        </div>
+
+        <div class="recipe-con" id="10">
+            <div class="recipe-img"  onclick="viewProuct(event,'id10' )">
+                <img src="./img/packed9.avif" alt="" />
+            </div>
+            <div class="recipe-text">
+                <p>recipe</p>
+                <h3>lunch box: spicy tuna rice bowl</h3>
+            </div>
+
+
+
+            <div class="item">
+                <div> <span>$</span>
+                    <div class="price">11</div>
+                </div>
+
+                <div class="shop-icon">
+                    <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="tag">
+                <span class="rate">8</span>% off
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+<div class="testi">
+<h1> Hear from our customers</h1>
+
+
+
+<div class="carousel-container recipe>
+    <div class="carousel-inner">
+      <!-- First Tweet -->
+      <div class="carousel-item active">
+        <div class="tweet">
+          <div class="profile-image">
+            <img src="./img/side-menu.avif" alt="Profile picture of Jann Alexander">
+          </div>
+          <div class="tweet-content">
+            <div class="tweet-text">
+              the meal is delicious and the service is great. I highly recommend it!
+            </div>
+            <div class="tweet-info">
+                <p>Jann Alexander</p>
+                <span>05:15 AM - 06 Nov 14</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Second Tweet -->
+      <div class="carousel-item">
+        <div class="tweet">
+          <div class="profile-image">
+            <img src="./img/side-menu2.avif" alt="Profile picture of DianaFinlayHendric">
+          </div>
+          <div class="tweet-content">
+            <div class="tweet-text">
+                I love how convenient it is to order from here. The app is super easy to navigate!
+            </div>
+            <div class="tweet-info">
+                <p>DianaFinlayHendric</p>
+                <span>07:24 AM - 29 Oct 14</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="tweet">
+          <div class="profile-image">
+            <img src="./img/side-menu2.avif" alt="Profile picture of DianaFinlayHendric">
+          </div>
+          <div class="tweet-content">
+            <div class="tweet-text">
+                I love how convenient it is to order from here. The app is super easy to navigate!
+            </div>
+            <div class="tweet-info">
+                <p>DianaFinlayHendric</p>
+                <span>07:24 AM - 29 Oct 14</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="tweet">
+          <div class="profile-image">
+            <img src="./img/side-menu3.avif" alt="Profile picture of DianaFinlayHendric">
+          </div>
+          <div class="tweet-content">
+            <div class="tweet-text">
+                I love how convenient it is to order from here. The app is super easy to navigate!
+            </div>
+            <div class="tweet-info">
+                <p>DianaFinlayHendric</p>
+                <span>07:24 AM - 29 Oct 14</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="tweet">
+          <div class="profile-image">
+            <img src="./img/side-menu4.avif" alt="Profile picture of DianaFinlayHendric">
+          </div>
+          <div class="tweet-content">
+            <div class="tweet-text">
+                I love how convenient it is to order from here. The app is super easy to navigate!
+            </div>
+            <div class="tweet-info">
+                <p>DianaFinlayHendric</p>
+                <span>07:24 AM - 29 Oct 14</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  
+      <!-- Additional Tweets... -->
+    </div>
+ 
+  <!-- Carousel Dots -->
+<div class="carousel-dots">
+    <!-- Dots will be generated dynamically with JavaScript -->
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="start-planning" id="plan">
+
+    <div class="container">
+        <h2>Start Planning</h2>
+        <form>
+            <div class="form-group">
+                <label for="protein">Choose Protein</label>
+                <select id="protein" onchange="validateForm()">
+                    <option value="">Select Protein</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Tofu">Tofu</option>
+                    <option value="Fish">Fish</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="carbs">Choose Carbs</label>
+                <select id="carbs" onchange="validateForm()">
+                    <option value="">Select Carbs</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Pasta">Pasta</option>
+                    <option value="Quinoa">Quinoa</option>
+                    <option value="Potatoes">Potatoes</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="veg">Choose Vegetables</label>
+                <select id="veg" onchange="validateForm()">
+                    <option value="">Select Vegetables</option>
+                    <option value="Broccoli">Broccoli</option>
+                    <option value="Carrots">Carrots</option>
+                    <option value="Spinach">Spinach</option>
+                    <option value="Peppers">Peppers</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="toppings">Choose Toppings</label>
+                <select id="toppings" onchange="validateForm()">
+                    <option value="">Select Toppings</option>
+                    <option value="Cheese">Cheese</option>
+                    <option value="Avocado">Avocado</option>
+                    <option value="Olives">Olives</option>
+                    <option value="Nuts">Nuts</option>
+                </select>
+            </div>
+    
+            <button type="submit" id="submit-btn" disabled>Submit</button>
+        </form>
+    </div>
+
+
+
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+        <div class="text-sm">
+            © Freshly - 2023
+        </div>
+
+        <nav>
+            <a href="#">about us</a>
+            <a href="#">contact us</a>
+            <a href="#">Our Story</a>
+            <a href="#">ads choice</a>
+        </nav>
+
+        <div class="social-buttons">
+           
+            <!-- <a href="#">Privacy & cookies</a> -->
+            <a href="#">
+<svg viewBox="0 0 2500 2500" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><radialGradient id="0" cx="332.14" cy="2511.81" r="3263.54" gradientUnits="userSpaceOnUse"><stop offset=".09" stop-color="#fa8f21"></stop><stop offset=".78" stop-color="#d82d7e"></stop></radialGradient><radialGradient id="1" cx="1516.14" cy="2623.81" r="2572.12" gradientUnits="userSpaceOnUse"><stop offset=".64" stop-color="#8c3aaa" stop-opacity="0"></stop><stop offset="1" stop-color="#8c3aaa"></stop></radialGradient></defs><path d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57" fill="url(#0)"></path><path d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57" fill="url(#1)"></path></g>
+</svg>
+
+            </a> <!-- Discord Icon with a Unicode symbol -->
+            <a href="#">
+                <svg viewBox="126.444 2.281 589 589" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="420.944" cy="296.781" r="294.5" fill="#2daae1"></circle><path d="M609.773 179.634c-13.891 6.164-28.811 10.331-44.498 12.204 16.01-9.587 28.275-24.779 34.066-42.86a154.78 154.78 0 0 1-49.209 18.801c-14.125-15.056-34.267-24.456-56.551-24.456-42.773 0-77.462 34.675-77.462 77.473 0 6.064.683 11.98 1.996 17.66-64.389-3.236-121.474-34.079-159.684-80.945-6.672 11.446-10.491 24.754-10.491 38.953 0 26.875 13.679 50.587 34.464 64.477a77.122 77.122 0 0 1-35.097-9.686v.979c0 37.54 26.701 68.842 62.145 75.961-6.511 1.784-13.344 2.716-20.413 2.716-4.998 0-9.847-.473-14.584-1.364 9.859 30.769 38.471 53.166 72.363 53.799-26.515 20.785-59.925 33.175-96.212 33.175-6.25 0-12.427-.373-18.491-1.104 34.291 21.988 75.006 34.824 118.759 34.824 142.496 0 220.428-118.052 220.428-220.428 0-3.361-.074-6.697-.236-10.021a157.855 157.855 0 0 0 38.707-40.158z" fill="#ffffff"></path></g>
+                </svg>       
+            </a> 
+
+
+
+
+            <a href="#">
+                <svg viewBox="126.445 2.281 589 589" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="420.945" cy="296.781" r="294.5" fill="#0068FF"></circle><path d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z" fill="#ffffff"></path></g>
+                </svg>      
+            </a>
+
+        
+
+
+
+            <a href="#">
+                <svg viewBox="-1 0 226 226" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <linearGradient id="a" y1="6.76%" x2="50%" x1="50%" y2="95.6%"> <stop stop-color="#00C6FF" offset="0"></stop> <stop stop-color="#0068FF" offset="1"></stop> </linearGradient> </defs> <path fill="url(#a)" d="m41.255 185.52v40.2l37.589-21.37c10.478 3.02 21.616 4.65 33.156 4.65 61.86 0 112-46.79 112-104.5 0-57.714-50.14-104.5-112-104.5-61.856 0-112 46.786-112 104.5 0 32.68 16.078 61.86 41.255 81.02z"></path> <path fill="#ffffff" d="m100.04 75.878l-60.401 63.952 54.97-30.16 28.721 30.16 60.06-63.952-54.36 29.632-28.99-29.632z"></path> </g>
+                </svg>      
+            </a> 
+
+
+
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+    
+
+
+
+        <script src="./script.js"></script>
+</body>
+
+</html>
